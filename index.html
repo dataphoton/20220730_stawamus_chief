@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stawamus Chief</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 100%;
+        height: 95vh;
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "autoLoad": true,
+    "haov": 182.95,
+    "vaov": 69.04,
+    "vOffset": 0,
+    "minHfov": 10,
+    "hfov": 70,
+    "yaw": 0,
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "type": "multires",
+    "multiRes": {
+        "basePath": "./img/stawamus_chief",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 6,
+        "cubeResolution": 8496
+    }
+});
+</script>
+
+</body>
+</html>
